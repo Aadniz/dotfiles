@@ -1,0 +1,20 @@
+# With a fresh new Arch linux i3, these are the next commands:
+
+sudo pacman -S feh
+sudo pacman -S rofi
+sudo pacman -S konsole
+sudo pacman -S compton
+sudo pacman -S git
+
+
+## Polybar
+https://github.com/jaagr/polybar#building-from-source
+
+
+## I'm from norway... 
+localectl set-keymap --no-convert no
+sudo setxkbmap -layout no
+
+####
+##  I'll be working on this file later...
+####
