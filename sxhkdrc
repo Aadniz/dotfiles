@@ -31,7 +31,8 @@ super + shift + e
 
 # Quick Menu
 super + q
-	rofi -show run -lines 5 -eh 2 -width 100 -padding 350 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#333333"
+	dmenu_run
+#	rofi -show run -lines 5 -eh 2 -width 100 -padding 350 -opacity "85" -bw 0 -bc "$bg-color" -bg "$bg-color" -fg "$text-color" -hlbg "$bg-color" -hlfg "#333333"
 
 # Toggle floating
 super + {c,space,t,f}
@@ -50,8 +51,8 @@ super + g
 	bspc node -s biggest.local
 
 # focus the node for the given path jump
-super + {p,b,comma,period}
-        bspc node -f @{parent,brother,first,second}
+#super + {p,b,comma,period}
+#        bspc node -f @{parent,brother,first,second}
 
 super + {_,shift + }{Left,Down,Up,Right}
         bspc node -{f,s} {west,south,north,east}
@@ -69,6 +70,25 @@ super + {_,shift + }{1-9,0}
 # Change gaps
 super + w
 	bspc config -d focused window_gap {15,30,50,70,100}
+
+################    TESTING     ##############
+
+## Float all windowses
+super + a
+	bspc query -W| xargs -n1 -I '{}' bspc @/ {} -t floating=on
+
+## Balance all windowses
+super + b
+	bspc node @focused:/ -B
+
+super + r
+	bspc node @/ -R 90
+
+################ END OF TESTING ##############
+
+# Prefocus
+super + {h,v}
+	bspc node -p {east,south}
 
 # Audio management
 XF86AudioRaiseVolume
