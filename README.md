@@ -1,6 +1,10 @@
 # dotfiles
 i3 dotfiles
 
+---
+
+I am mega weeb. If you're a weeb aswell, feel free to clone the repo, add some of the configs.
+
 ### Looks
 
 *it looks something like this*
