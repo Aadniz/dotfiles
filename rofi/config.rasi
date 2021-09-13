@@ -1,0 +1,11 @@
+configuration {
+ modi            : "window,drun,run,ssh";
+ kb-cancel       : "Escape,Alt+F1";
+ display-ssh     : "リモート";
+ display-run     : "実行する";
+ display-drun    : "drun";
+ display-window  : "WINDOW";
+ display-combi   : "combi";
+ terminal        : "/usr/bin/kitty";
+}
+@theme "~/.local/share/rofi/themes/squared-nord.rasi"
