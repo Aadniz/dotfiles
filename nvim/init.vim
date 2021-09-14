@@ -7,6 +7,7 @@ Plug 'Raimondi/delimitMate'
 Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/goyo.vim'
 Plug 'vim-pandoc/vim-pandoc'
+Plug 'vim-pandoc/vim-pandoc-syntax'
 call plug#end()
 
 " Treat all .md files as markdown
