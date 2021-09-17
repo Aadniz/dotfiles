@@ -7,7 +7,8 @@ Plug 'Raimondi/delimitMate'
 Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/goyo.vim'
 Plug 'vim-pandoc/vim-pandoc'
-Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'D3faIt/vim-rest-console'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 
 " Treat all .md files as markdown
@@ -19,7 +20,7 @@ autocmd FileType markdown set cursorline
 " Hide and format markdown elements like **bold**
 autocmd FileType markdown set conceallevel=2
 
-" Set spell check to British English
+" Set spell check to Norwegian on markdown files
 autocmd FileType markdown setlocal spell spelllang=nb
 
 autocmd FileType markdown imap <C-O> <Esc>:w<CR><Esc>:Pandoc pdf<CR>
@@ -35,8 +36,9 @@ let g:lightline = {
    \ 'colorscheme':'monokai_tasty',
    \ }
 
-"nnoremap <C-g> :Goyo<CR>
-"autocmd FileType markdown Goyo
+" NerdTree
+map <C-e> <Esc>:NERDTreeToggle<CR>
+imap <C-e> <Esc>:NERDTreeToggle<CR>
 
 " Configuration for vim-markdown
 let g:vim_markdown_conceal = 2
@@ -48,6 +50,11 @@ let g:vim_markdown_strikethrough = 1
 let g:vim_markdown_autowrite = 1
 let g:vim_markdown_edit_url_in = 'tab'
 let g:vim_markdown_follow_anchor = 1
+
+" Rest VIM
+let g:vrc_elasticsearch_support = 1
+let g:vrc_syntax_highlight_response = 1
+let g:vrc_output_buffer_name = '__VRC_OUTPUT.json'
 
 set termguicolors
 
